@@ -1,0 +1,114 @@
+.TicketGenerator {
+  min-width: 700px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 20px 0px #355e82;
+}
+
+.numberPad {
+  min-width: 300px;
+  background-color: white;
+  border-radius: 5px;
+  color: #2b2b2b;
+  font-size: 18px;
+}
+.wheel {
+  min-width: 300px;
+}
+
+.numberDisplay {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+  margin-left: auto;
+  padding: 0 10px;
+  position: relative;
+}
+.error {
+  font-size: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  right: 20px;
+  padding: 2px 5px;
+  border: 1px solid #fa541c;
+  background-color: #f7e4de;
+  border-radius: 4px;
+  color: #fa541c;
+}
+.row {
+  display: flex;
+}
+.fa-backspace {
+  color: rgb(92, 85, 85);
+}
+.fa-trash {
+  color: rgb(230, 34, 34);
+}
+
+.row div {
+  min-height: 60px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(228, 228, 228);
+  cursor: pointer;
+}
+.row div:hover,
+.row div i:hover {
+  color: #186ab4 !important;
+}
+.addATicket {
+  text-align: center;
+  padding: 7px;
+  font-size: 11px;
+  color: black;
+  cursor: pointer;
+}
+
+.addATicket i {
+  font-size: 7px;
+  margin-right: 5px;
+  padding: 2px;
+  border: 1px solid black;
+  position: relative;
+  bottom: 2px;
+}
+
+.wheel {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.wheel p {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.wheel .icon i {
+  font-size: 180px;
+  color: white;
+  cursor: pointer;
+}
+.wheel .icon i:active {
+  transform: scale(1.1);
+}
+.range {
+  font-size: 11px;
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #f07f1c;
+  border: 1px solid #f79540;
+  background-color: #fcf7ec;
+}

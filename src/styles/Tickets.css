@@ -1,0 +1,56 @@
+.Tickets {
+  min-width: 700px;
+}
+
+.Tickets p {
+  margin: 15px 0;
+  color: white;
+  font-size: 14px;
+}
+
+.eachTicket {
+  height: 50px;
+  width: 130px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 0px 4px;
+  position: relative;
+}
+
+.eachTicket .fa-trash {
+  font-size: 12px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ticketId {
+  font-size: 10px;
+  border: 1px solid #186ab4;
+  background-color: #e3f0fa;
+  padding: 1px 4px;
+  color: #054277;
+  border-radius: 3px;
+}
+.ticketNumber {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.number {
+  font-size: 8px;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #3f51b5;
+  color: white;
+  padding-top: 2px;
+}
