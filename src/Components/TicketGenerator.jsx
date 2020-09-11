@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "../styles/TicketGenerator.css";
 
-function TicketGenerator() {
+function TicketGenerator(props) {
+  const { handleSetAllTickets, allTickets } = props;
+
   const [numberArray, setnumberArray] = useState([]);
 
   const handleSetNumberArray = (e) => {
     if (numberArray.length === 6) return alert("Enter Six Digits Only ");
+    if (numberArray[0] === undefined && e.target.innerText === "0")
+      return alert("Initial Digit 0 is not allowed ");
     setnumberArray([...numberArray, e.target.innerText]);
   };
 
@@ -52,12 +56,31 @@ function TicketGenerator() {
             <div onClick={popNumber}>
               <i className="fas fa-backspace"></i>
             </div>
-            <div>0</div>
+            <div onClick={handleSetNumberArray}>0</div>
             <div onClick={deleteNumber}>
               <i className="fas fa-trash"></i>
             </div>
           </div>
-          <p className="addATicket">
+          <p
+            className="addATicket"
+            onClick={() => {
+              if (allTickets.length >= 5) {
+                return alert("Max Five Tickets Only");
+              }
+              let duplicate = false;
+              allTickets.forEach((ele) => {
+                if (
+                  ele.join("").toString() === numberArray.join("").toString()
+                ) {
+                  duplicate = true;
+                }
+              });
+              if (duplicate) return alert("Ticket Already Exist");
+              if (numberArray.length !== 6) return alert("Enter 6 Digits");
+              handleSetAllTickets(numberArray);
+              setnumberArray([]);
+            }}
+          >
             <i className="fas fa-plus"></i>ADD TICKET
           </p>
         </div>

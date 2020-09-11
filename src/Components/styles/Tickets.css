@@ -1,22 +1,20 @@
 .Tickets {
-  min-width: 850px;
+  min-width: 800px;
 }
 
 .Tickets p {
-  margin: 35px 0 5px;
+  margin: 15px 0;
   color: white;
   font-size: 14px;
 }
 
 .eachTicket {
-  height: 70px;
-  width: 150px;
+  height: 50px;
+  width: 130px;
   background-color: #fff;
   border-radius: 3px;
   padding: 0px 4px;
   position: relative;
-  display: inline-block;
-  margin: 10px;
 }
 
 .eachTicket .fa-trash {
@@ -41,25 +39,18 @@
 .ticketNumber {
   display: flex;
   justify-content: space-around;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .number {
-  font-size: 12px;
-  height: 20px;
-  width: 20px;
+  font-size: 8px;
+  height: 15px;
+  width: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   background-color: #3f51b5;
   color: white;
-  padding-top: 0px;
-}
-
-@media only screen and (max-width: 900px) {
-  .Tickets {
-    min-width: 100vw;
-    padding: 10px;
-  }
+  padding-top: 2px;
 }
